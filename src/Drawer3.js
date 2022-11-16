@@ -3,6 +3,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import { Icon } from 'react-native-elements';
 
 import Screen1 from "../Menu/Screen1";
+import AdmiScreen from "../Drawer/AdmiScreen";
 import Screen2 from "../Menu/Screen2";
 import Screen3 from "../Menu/Screen3";
 import Screen4 from "../Menu/Screen4";
@@ -14,7 +15,7 @@ import InicioScreen from "../Drawer/InicioScreen";
 
 const Drawer = createDrawerNavigator();
 
-function DrawerNavigator(){
+function Drawer3(){
 
 
     
@@ -58,7 +59,7 @@ function DrawerNavigator(){
 
             drawerContent={props => <CustomDrawer {... props} />}
        
-            initialRouteName="InicioDrawer"
+            initialRouteName="Screen1"
 
             screenOptions={({ route }) => ({
             drawerActiveBackgroundColor: '#E36B2C',
@@ -72,7 +73,7 @@ function DrawerNavigator(){
             drawerIcon: ({ color }) => screenOptions(route, color)
         })}>
             <Drawer.Screen name="InicioDrawer" component={InicioScreen} options={{title:'Inicio', headerShown: true}}/>
-            <Drawer.Screen name="Screen1" component={Screen1} options={{title:'Proveedores', headerShown: true}}/>
+            <Drawer.Screen name="Screen1" component={AdmiScreen} options={{title:'Administracion', headerShown: true}}/>
             <Drawer.Screen name="Screen2" component={Screen2} options={{title:'Miembros', headerShown: true}}/>
             <Drawer.Screen name="Screen3" component={Screen3} options={{title:'Administración', headerShown: true}}/>
             <Drawer.Screen name="Screen4" component={Screen4} options={{title:'Catalogo', headerShown: true}}/>
@@ -81,4 +82,4 @@ function DrawerNavigator(){
 }
 
 
-export default DrawerNavigator;
+export default Drawer3;

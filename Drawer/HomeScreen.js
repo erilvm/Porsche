@@ -2,10 +2,10 @@ import React  from 'react'
 import { StyleSheet,View,Text } from 'react-native';
 
 
-function AdmiScreen() {
+function HomeScreen() {
     return (
       <View style={styles.container}>
-        <Text>Hola Admin</Text>
+        <Text>Hola estas home (slider de eventos)</Text>
       </View>
     );
   }
@@ -20,4 +20,4 @@ function AdmiScreen() {
     });
 
 
-export default AdmiScreen;  
+export default HomeScreen;  

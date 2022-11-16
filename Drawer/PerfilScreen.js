@@ -1,45 +1,15 @@
 import React, { Component } from 'react';  
 import { StyleSheet, View,Button,TouchableOpacity ,Text} from 'react-native';
 
-    
-
 
 export default class PerfilScreen extends Component {  
-  
-  LogoutDB=()=>{
-
-    var Data ={
-
-    };
-    
-    var headers = {
-        'Accept' : 'application/json',
-        'Content-Type' : 'application/json'
-    };
-            
-    fetch("http://dtai.uteq.edu.mx/~erinem201/api/Logout.php",{
-        method: 'POST',
-        headers: headers,
-        body: JSON.stringify(Data)
-    })
-    this.props.navigation.replace("LoginScreen");
-
-   }
-
- 
 
     render() {  
         return (  
  
             <View style={styles.AppStyle}>  
-                <View style={styles.ButtonView}>  
-                    <Button  
-                        onPress={()=>{this.LogoutDB()}}  
-                        title="Cerrar sesión"  
-                        color="#996633"/> 
-                </View> 
-
-                <TouchableOpacity 
+                
+        <TouchableOpacity 
         style={styles.loginBtn}  
         activeOpacity={0.5}
         onPress={()=>{this.props.navigation.navigate("SettingsDetail")}}
@@ -69,9 +39,9 @@ const styles = StyleSheet.create({
     }, 
     AppStyle:{
         flex: 1,
-        backgroundColor: "#cccccc",
+       // backgroundColor: "#cccccc",
         padding: 20,
-        marginTop: 6,
+        marginTop: 30,
         paddingBottom: 3,
         width: '100%'
       },  

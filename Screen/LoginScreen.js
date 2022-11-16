@@ -28,7 +28,47 @@ export default class LoginScreen extends Component {
     })
 }
 
+//codigo para enviar y recibir datos con php al back
+RegDataInDB=()=>{
+  var correo = this.state.correo;
+  var contrasenia = this.state.contrasenia;
 
+
+  if ((correo.length==0) || (contrasenia.length==0)){
+    alert("Campo obligatorio!");
+  }else{
+
+    var Data ={
+      correo: correo,
+      contrasenia: contrasenia
+    };
+
+    var headers = {
+      'Accept' : 'application/json',
+      'Content-Type' : 'application/json'
+    };
+
+    fetch("http://dtai.uteq.edu.mx/~erinem201/api/LoginP.php",{
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify(Data)
+    })
+    .then((Response)=>Response.json())
+    .then((Response)=>{
+       //alert  (Response[0].Message)
+      if (Response[0].Message == "Iniciando correctamente") {
+        //alert("bienvenido")
+          this.props.navigation.navigate("Home");
+
+      } else{
+        alert (Response[0].Message)
+      }
+
+      })
+      .catch((error)=>{console.error("ERROR:" + error);
+    })
+  }
+}
 
 //app
   render() {
@@ -116,8 +156,8 @@ export default class LoginScreen extends Component {
         <TouchableOpacity 
         style={styles.loginBtn}  
         activeOpacity={0.5}
-        //onPress={()=>{this.RegDataInDB()}}
-        onPress={()=>{this.props.navigation.navigate("Home")}}
+        onPress={()=>{this.RegDataInDB()}}
+        //onPress={()=>{this.props.navigation.navigate("Home")}}
         >
         <Text style={styles.loginText}>LOGIN</Text>
         </TouchableOpacity>

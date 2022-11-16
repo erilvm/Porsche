@@ -2,14 +2,12 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import LoginScreen from '../Screen/LoginScreen';
 import PasswordScreen from '../Screen/PasswordScreen';
-//import Bottom from "../src/Bottom";
 import DrawerNavigator from '../src/DrawerNavigator';
-
-
+import Bottom from '../src/Bottom';
 
 
 const Stack = createStackNavigator();
-// Navigator, Screen, Group
+
 
 export default function Navigation() {
   
@@ -32,15 +30,16 @@ export default function Navigation() {
           options={{headerShown: true}}
       
         />
-         <Stack.Screen
+       
+        <Stack.Screen
          //nombre con el cual se va a llamar el screen 
           name="Home"
-          component={DrawerNavigator}
+          component={Bottom}
+          //component={DrawerNavigator}
           // Hiding header for Splash Screen
           options={{headerShown: false}}
         />
 
-        
           
       </Stack.Navigator>
 

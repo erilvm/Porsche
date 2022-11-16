@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native'
 function EventosScreen() {
     return (
       <View style={styles.container}>
-        <Text>Hola estas eventos</Text>
+        <Text> Hola eventos screen</Text>
       </View>
     );
   }
