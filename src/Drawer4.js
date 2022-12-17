@@ -23,12 +23,12 @@ function Drawer4(){
     const screenOptions = (route, color) => {     
         let iconName
         switch (route.name) {
-            case "InicioDrawer":
+            case "InicioDrawer4":
             iconName = "home"
             break;
 
-            case "Screen1":
-            iconName = "account-group"
+            case "Perfil4":
+            iconName = "account"
             break;
 
             
@@ -60,7 +60,7 @@ function Drawer4(){
 
             drawerContent={props => <CustomDrawer {... props} />}
        
-            initialRouteName="Perfil"
+            initialRouteName="Perfil4"
 
             screenOptions={({ route }) => ({
             drawerActiveBackgroundColor: '#E36B2C',
@@ -73,8 +73,8 @@ function Drawer4(){
             },
             drawerIcon: ({ color }) => screenOptions(route, color)
         })}>
-            <Drawer.Screen name="InicioDrawer" component={InicioScreen} options={{title:'Inicio', headerShown: true}}/>
-            <Drawer.Screen name="Perfil" component={MenuNavigation} options={{title:'Mi perfil', headerShown: true}}/>
+            <Drawer.Screen name="InicioDrawer4" component={InicioScreen} options={{title:'Inicio', headerShown: true}}/>
+            <Drawer.Screen name="Perfil4" component={MenuNavigation} options={{title:'Mi perfil', headerShown: false}}/>
             <Drawer.Screen name="Screen2" component={Screen2} options={{title:'Miembros', headerShown: true}}/>
             <Drawer.Screen name="Screen3" component={Screen3} options={{title:'Administración', headerShown: true}}/>
             <Drawer.Screen name="Screen4" component={Screen4} options={{title:'Catalogo', headerShown: true}}/>

@@ -22,25 +22,25 @@ function Drawer2(){
     const screenOptions = (route, color) => {     
         let iconName
         switch (route.name) {
-            case "InicioDrawer":
+            case "InicioDrawer2":
             iconName = "home"
             break;
 
-            case "Screen1":
+            case "Pag1":
             iconName = "account-group"
             break;
 
             
-            case "Screen2":
+            case "Pag2":
             iconName = "account-multiple"
             break;
 
             
-            case "Screen3":
+            case "Pag3":
             iconName = "clipboard-text"
             break;
 
-            case "Screen4":
+            case "Pag4":
             iconName = "image-text"
             break;
         }
@@ -59,7 +59,7 @@ function Drawer2(){
 
             drawerContent={props => <CustomDrawer {... props} />}
        
-            initialRouteName="Screen1"
+            initialRouteName="Pag1"
 
             screenOptions={({ route }) => ({
             drawerActiveBackgroundColor: '#E36B2C',
@@ -72,11 +72,11 @@ function Drawer2(){
             },
             drawerIcon: ({ color }) => screenOptions(route, color)
         })}>
-            <Drawer.Screen name="InicioDrawer" component={InicioScreen} options={{title:'Inicio', headerShown: true}}/>
-            <Drawer.Screen name="Screen1" component={EventosScreen} options={{title:'Eventos', headerShown: true}}/>
-            <Drawer.Screen name="Screen2" component={Screen2} options={{title:'Miembros', headerShown: true}}/>
-            <Drawer.Screen name="Screen3" component={Screen3} options={{title:'Administración', headerShown: true}}/>
-            <Drawer.Screen name="Screen4" component={Screen4} options={{title:'Catalogo', headerShown: true}}/>
+            <Drawer.Screen name="InicioDrawer2" component={InicioScreen} options={{title:'Inicio', headerShown: true}}/>
+            <Drawer.Screen name="Pag1" component={EventosScreen} options={{title:'Eventos', headerShown: true}}/>
+            <Drawer.Screen name="Pag2" component={Screen2} options={{title:'Miembros', headerShown: true}}/>
+            <Drawer.Screen name="Pag3" component={Screen3} options={{title:'Administración', headerShown: true}}/>
+            <Drawer.Screen name="Pag4" component={Screen4} options={{title:'Catalogo', headerShown: true}}/>
         </Drawer.Navigator>
     );
 }

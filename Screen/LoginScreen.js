@@ -156,8 +156,8 @@ RegDataInDB=()=>{
         <TouchableOpacity 
         style={styles.loginBtn}  
         activeOpacity={0.5}
-        onPress={()=>{this.RegDataInDB()}}
-        //onPress={()=>{this.props.navigation.navigate("Home")}}
+        //onPress={()=>{this.RegDataInDB()}}
+        onPress={()=>{this.props.navigation.navigate("Home")}}
         >
         <Text style={styles.loginText}>LOGIN</Text>
         </TouchableOpacity>

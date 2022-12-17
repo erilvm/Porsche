@@ -5,7 +5,7 @@ import { StyleSheet,View,Text, TouchableOpacity } from 'react-native';
 const  SettingsDetails = ({navigation})=> {
     return (
       <View style={styles.container}>
-        <Text>Hola estas en SettingsDetails Maximo</Text>
+        <Text>Perfil del automóvil</Text>
 
 
         <TouchableOpacity 

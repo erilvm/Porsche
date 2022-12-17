@@ -88,8 +88,8 @@ export default class MenuNavigation extends Component {
           }}  
           /> 
 
-        <Stack.Screen  name="Settings" component={Settings} options={{headerShown: true,}}/> 
-        <Stack.Screen  name="SettingsDetail" component={SettingsDetail} options={{headerShown: true}}/> 
+        <Stack.Screen  name="Settings" component={Settings} options={{title:'Editar perfil', headerShown: true}}/> 
+        <Stack.Screen  name="SettingsDetail" component={SettingsDetail} options={{title:'Perfil automóvil',headerShown: true}}/> 
     
     </Stack.Navigator>
   );

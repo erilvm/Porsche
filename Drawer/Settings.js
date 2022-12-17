@@ -47,4 +47,4 @@ const  Settings = ({navigation})=> {
     });
 
 
-export default Settings;  
+export default Settings;     
